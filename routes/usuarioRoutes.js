@@ -19,4 +19,20 @@ router.get('/', function (req, res, next) {
 	})
 })
 
+// Implementar métodos PUT, PATCH, DELETE
+router.post('/', function (req, res, next) {
+	const usuarios = []
+	const usuarioRequest = { ...req.body }
+
+	// console.log(usuarioRequest)
+	usuarios.push(usuarioRequest)
+
+	res.status(201).json({
+		message: 'Usuário criado com sucesso!',
+		content: usuarios
+	})
+})
+
+// Implementar métodos PUT, PATCH, DELETE
+
 module.exports = router
