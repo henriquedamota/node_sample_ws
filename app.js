@@ -3,6 +3,8 @@ const app = express()
 const morgan = require('morgan')
 const compression = require('compression')
 
+const mongodbConnector = require('./mongodbConnector')
+
 // CONFIGS EXPRESS
 app.use(morgan('dev'))
 app.use(compression())
